@@ -78,6 +78,30 @@ npm run dev
 
 Open the local URL printed by Vite, usually `http://localhost:5173`.
 
+## Docker
+
+You can run the entire stack with Docker. No `docker-compose` file is required — build and run each service separately.
+
+### Backend
+
+```bash
+cd backend
+docker build -t sezzle-calculator-backend .
+docker run --rm -p 8080:8080 sezzle-calculator-backend
+```
+
+The API will be available at `http://localhost:8080`.
+
+### Frontend
+
+```bash
+cd frontend
+docker build -t sezzle-calculator-frontend .
+docker run --rm -p 5173:80 sezzle-calculator-frontend
+```
+
+Open `http://localhost:5173` in your browser. The frontend is served by Nginx on port 80 inside the container, mapped to 5173 on the host.
+
 ## API Usage
 
 ### Endpoint
