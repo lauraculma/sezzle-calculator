@@ -1,0 +1,157 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #192333;
+  background: #f3f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 20px;
+  box-shadow: 0 18px 55px rgb(24 39 75 / 8%);
+}
+
+.eyebrow {
+  color: #5268d8;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 14px 0 8px;
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #697386;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  color: #192333;
+  background: white;
+  border: 1px solid #d8deea;
+  border-radius: 9px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #5268d8;
+  box-shadow: 0 0 0 3px rgb(82 104 216 / 12%);
+}
+
+button {
+  min-height: 50px;
+  margin-top: 16px;
+  color: white;
+  background: #5268d8;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #4053bb;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.message strong {
+  overflow-wrap: anywhere;
+  font-size: 1.8rem;
+}
+
+.success {
+  color: #17663a;
+  background: #eaf8ef;
+}
+
+.error {
+  color: #a32626;
+  background: #fff0f0;
+}
+
+.footer {
+  margin: 24px 0 0;
+  color: #8992a3;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 16px;
+  }
+
+  .calculator {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}
